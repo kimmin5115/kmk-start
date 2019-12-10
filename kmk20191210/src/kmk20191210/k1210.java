@@ -7,6 +7,7 @@ public class k1210 {
 
 		
 		System.out.println("반가워");
+		System.out.println("아 집가고싶다");
 	}
 
 }
