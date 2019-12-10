@@ -7,7 +7,11 @@ public class k1210 {
 
 		
 		System.out.println("반가워");
-		System.out.println("아 집가고싶다");
+		System.out.println("아 집 가고 싶다");
+		int k, km;
+		k=10;
+		km=1;
+		System.out.println(k+km);
 	}
 
 }
