@@ -25,7 +25,7 @@ public class d11c7 {
 		
 		//for문을 이용해서 name 배열에 저장된 값을 모두 출력해보세요.
 		int k;
-		for(k=0; k<name; k++) {
+		for(k=0; k<name.length; k++) {
 			System.out.println(name[k]);
 			
 		}
@@ -34,14 +34,13 @@ public class d11c7 {
 		//정수형 배열 변수를 하나 선언해서 값을 4개 저장하고
 		//배열변수에 저장된 모든 값의 총합과 평균을 출력하세요
 		
-		int[] kmk={4, 3, 6, 7};
+		int[] kmk={4, 3, 6, 7, 5};
 		int k2=0;
 		int sum=0;
-		int avg;
-		
-		for(k2=0; k2<kmk.length; k2++) {
+		int avg=0;
+		for(k2=0;k2<kmk.length;k2++) {
 			System.out.print(kmk[k2]);
-			sum+=kmk.length;
+			sum+=kmk[k2];
 		}
 		avg=sum/kmk.length;
 		System.out.print(avg=sum/kmk[k2]);
