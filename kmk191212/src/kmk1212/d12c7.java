@@ -8,7 +8,7 @@ public class d12c7 {
 		// TODO Auto-generated method stub
 
 		Scanner scan = new Scanner(System.in);
-		int kmk, i;
+		int kmk, i, index=0;
 		int num[] = {1,2,5,3,4,7,6,9,10,8};
 		
 		System.out.println("숫자를 입력하세요 : ");
@@ -19,6 +19,12 @@ public class d12c7 {
 				System.out.println(kmk+"는"+(i)+"번째 있습니다.");
 			}
 		}
+		
+		for( i=0; i < num.length; i++) {
+			if(num[i]==kmk) {
+				index = i ;
+			}
+		}System.out.println(kmk+"는 "+(index+1)+"번째 있습니다.");
 	}
 
 }
