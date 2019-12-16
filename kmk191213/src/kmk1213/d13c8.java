@@ -10,7 +10,7 @@ public class d13c8 {
 		
 		Scanner scan = new Scanner(System.in);
 		int[] num=null;
-		int j, i=0, k, m, n=0, sum=0, avg=0, c=0;
+		int j, i=0, k, m, n=0, sum=0, avg=0, c=0, max=0;
 		boolean run=true;
 
 		
@@ -24,7 +24,7 @@ public class d13c8 {
 				System.out.println("학생수를 입력 : ");
 				m=scan.nextInt();
 				num=new int[m];}
-			if(k == 2) {
+			else if(k == 2) {
 				for(m=0; m<num.length; m++) {
 				System.out.println((m+1)+"번째 학생의 점수를 입력하세요");
 				j=scan.nextInt();
@@ -32,34 +32,39 @@ public class d13c8 {
 				sum+=j;
 				n++;
 			}}
-			if(k == 3) {
+			else if(k == 3) {
 				for(m=0; m<num.length; m++) {
 					System.out.println((m+1)+"번째 학생은"+num[m]+"점입니다.");
 				}
 			}
-			if(k==4) {
+			else if(k==4) {
 				
 			System.out.println("모든 점수 합 : "+sum);	
 			avg = sum / n;
 			System.out.println("모든 학생의 평균은 : "+avg);
 			
-			//최고값
+			for(k=0; k<num.length; k++) {
+				if(max<num[k]) {
+					max = num[k];
+				}
+			}
+			System.out.println("최고점수" + max);
+			
 			for(m=0; m<num.length; m++) {
 				for(i=1; i<num.length; i++) {
 					if(num[m]<num[i]) {
 						c = num[i];
 						num[i] = num[m];
 						num[m] = c;
-					}
-				}
-				
-			}
+					}			
 			for(m=0; m<num.length;m++) {
 				System.out.println(num[m]);
-			}}
-			if(k==5) { 
+			}}}
+			}
+			else if(k==5) { 
 				System.out.println("종료합니다.");
 				break;
+				
 			}
 				
 	
