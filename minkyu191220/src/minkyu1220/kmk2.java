@@ -1,5 +1,7 @@
 package minkyu1220;
 
+import java.util.ArrayList;
+
 public class kmk2 {
 	/*
 	 * 학생등록, 과목별 점수입력, 점수리스트, 과목별 최고점수, 종료
@@ -14,7 +16,15 @@ public class kmk2 {
 	private int javascore;
 	private int servletscore;
 	private int springscore;
+	private int i = 0;
+	private int max = 0;
 	
+	
+	
+	
+	
+	
+	ArrayList<kmk2> student = new ArrayList<kmk2>(); 
 	
 	
 	@Override
@@ -37,7 +47,15 @@ public class kmk2 {
 	public kmk2() {
 		
 	}
-
+	
+	//4번 메소드 생성
+	public void score() { for(i=0; i<student.size(); i++) {
+		if(max<student.get(i).getJavascore()) {
+			max = student.get(i).getJavascore();
+		}
+	}
+		
+	}
 	public String getName() {
 		return name;
 	}
