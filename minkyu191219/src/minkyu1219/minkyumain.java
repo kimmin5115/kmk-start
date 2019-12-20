@@ -2,7 +2,6 @@ package minkyu1219;
 
 import java.util.*;
 
-import kmk1217.naverMember;
 
 public class minkyumain {
 
@@ -23,61 +22,75 @@ public class minkyumain {
 		 * 6. 고객 정보는 ArrayList에 저장한다.
 		 */
 		
-		minkyu kim = new minkyu();
-		Scanner scan = new Scanner(System.in);
-		List<minkyu> list = new ArrayList<minkyu>();
-		
 		boolean run =true;
-		int m=1, m1=1;
-		int total=0;
+		int i=0;
+		int kmk=0;
+		String name=null;
+		String accountNumber=null ;
+		int number=0, money=0;
+		ArrayList<minkyu> list = new ArrayList<minkyu>();
+		Scanner scan = new Scanner(System.in);
+		minkyu min = new minkyu();
+		minkyu kim = new minkyu(number, name, accountNumber);
+
+		
 		
 		while(run) {
 			System.out.println("------------------------------------------");
-			System.out.println("1. 고객등록 "+"|"+" 2. 입금 "+"|"+" 3. 출금 "+"|"+" 4. 송금 "+"|"+" 5. 잔액 "+"|"+" 6. 종료");
+			System.out.println("0. 고객등록 "+"|"+"1. 고객등록 "+"|"+" 2. 입금 "+"|"+" 3. 출금 "+"|"+" 4. 잔액 "+"|"+" 5. 고객정보 "+"|"+" 6. 종료");
 			System.out.println("------------------------------------------");
-			int kmk = scan.nextInt();
-			if(0 == 0) {
-				System.out.println("고객 정보를 입력하세요");
-				System.out.println("이름을 입력하세요");
-				String name = scan.next();
-				System.out.println("계좌번호를 입력하세요");
-				String accountNumber = scan.next();
-				System.out.println("잔액을 입력하세요");
-				String money = scan.next();
-				kim.list.add(name,accountNumber,money);
-				
-			if(1 == 1) {
-				System.out.println("고객 정보를 입력하세요");
-				System.out.println("이름을 입력하세요");
-				String name = scan.next();
-				System.out.println("계좌번호를 입력하세요");
-				String accountNumber = scan.next();
-				System.out.println("잔액을 입력하세요");
-				String money = scan.next();
-				minkyu
-				list.add();
-			}else if(2 == 2) {
-					kim.min();
-			}else if (3==3) {
-				kim.min1();
-			}else if (4==4) {
-				kim.min2();
-			}else if (5==5) {
-				kim.min3();
-			}else if (6==6) {
-				kim.min4();
-				    }
+			kmk = scan.nextInt();
 			
+			if(kmk == 0) {
+				System.out.println("고객 정보를 입력하세요");
+				System.out.println("이름을 입력하세요");
+				name = scan.next();
+				System.out.println("계좌번호를 입력하세요");
+				accountNumber = scan.next();
+				System.out.println("잔액을 입력하세요");
+				number = scan.nextInt();
+				minkyu kim1 = new minkyu(number, name, accountNumber);
+				min.list.add(kim1);
+			}
+			if(kmk == 1) {
+				System.out.println("고객 정보를 입력하세요");
+				System.out.println("이름을 입력하세요");
+				name = scan.next();
+				System.out.println("계좌번호를 입력하세요");
+				accountNumber = scan.next();
+				System.out.println("잔액을 입력하세요");
+				number = scan.nextInt();
+				min.setNumber(number);
+				min.list.add(min);
+			}else if(kmk == 2) {
+					min.min();
+			}else if (kmk == 3) {
+				min.min1();
+			}else if (kmk == 4) {
+				min.min2();
+			}else if (kmk == 5) {
+				if(kmk == 5) {
+					for(i=0; i<min.list.size(); i++) {
+						System.out.println(i+1+"."+
+					"이름 : " +min.list.get(i).getName()+
+					"계좌번호 : "+min.list.get(i).getNumber()+
+					"잔액 : "+min.list.get(i).getNumber());
+					}
+				min.min3();
+			}else if (kmk == 6) {
+				min.min4();
+				    }
+
 		}
-	
-		
-		
-		
-		
-		
-		
-		
-		
+
+
+
+
+
+		}
+		}
+
+
+
 	}
 
-}
